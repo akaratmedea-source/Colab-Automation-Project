@@ -12,7 +12,9 @@ jobs:
       uses: actions/checkout@v4
 
     - name: Run Colab Notebook using Colab Action
-      uses: wshuman/colab-action@v1 # الأداة المصححة
+      # 🛑 قم بتغيير السطر هنا للمرة الأخيرة:
+      uses: mix-labs/colab-action@v1
+      # 🛑 بدلاً من: uses: wshuman/colab-action@v1
       with:
-        notebook: 'test_automation.ipynb'
+        notebook: 'test_automation.ipynb' 
         google_service_account_json: ${{ secrets.GOOGLE_CREDS }}
